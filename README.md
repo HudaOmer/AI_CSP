@@ -25,6 +25,8 @@ Solutions are obtained using:
 
 ### 🗺 Map 1: Simple Map
 
+![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Figure_1.jpg)
+
 #### CSP Definition:
 - **Variables**: A, B, C, D, E  
 - **Domain**: {Red, Green, Blue}  
