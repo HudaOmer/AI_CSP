@@ -35,6 +35,19 @@ Solutions are obtained using:
 #### Solution:
 - **Backtracking**:  
   Shows step-by-step assignments, including decisions that lead to backtracking.
+  **Step 1:** Start by assigning a color to variable A. Let's say A = Red.
+  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_A.png)
+  **Step 2:** Move to variable B. B cannot be Red (adjacent to A). Let's try B = Green.
+  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_B.png)
+  **Step 3:** Move to variable C. C cannot be Red (adjacent to A). Let's try C = Green. However, B is also Green, and B is not adjacent to C, so this is a valid assignment so far.
+  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_C.png)
+  **Step 4:** Move to variable D. D cannot be Green (adjacent to B) and cannot be Green (adjacent to C). So, D must be Blue.
+  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_D.png)
+  **Step 5:** Move to variable E. E cannot be Green (adjacent to C) and cannot be Blue (adjacent to D). So, E must be Red.
+  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_final.png)
+  ▪ We have found a valid assignment: A=Red, B=Green, C=Green, D=Blue, E=Red.
+  The solution is direct, No backtracking was needed!
+  
 - **Arc Consistency**:  
   Domains are filtered using AC-3 to eliminate inconsistent values early.
   
