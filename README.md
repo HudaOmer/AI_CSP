@@ -57,8 +57,7 @@ Move to variable **B**.
 
 **Step 3:**  
 Move to variable **C**.  
-`C ≠ Red` (adjacent to A) & `C ≠ Green` (adjacent to B) → Try: `C = Blue`  
-This is valid because **B and C are not adjacent**.  
+`C ≠ Red` (adjacent to A) & `C ≠ Green` (adjacent to B) → Try: `C = Blue`
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_C.png?raw=true" alt="Step 3" width="50%"/>
 
 ---
