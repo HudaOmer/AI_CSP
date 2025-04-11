@@ -46,6 +46,8 @@ Solutions are obtained using:
 
 ### 🌀 Map 2: Circular Map
 
+![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Figure_2.jpg)
+
 #### CSP Definition:
 - **Variables**: A, B, C, D  
 - **Domain**: {Red, Green, Blue}  
@@ -64,6 +66,8 @@ Solutions are obtained using:
 ---
 
 ### 🌟 Map 3: Star Map
+
+![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Figure_3.jpg)
 
 #### CSP Definition:
 - **Variables**: Center, A, B, C, D  
