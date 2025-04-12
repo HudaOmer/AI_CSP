@@ -165,27 +165,27 @@ Since we cannot assign a valid color to D, we must **backtrack** to the previous
 **Step 3 (Backtrack 1):**   
 Move back to variable **C**.   
 The current assignment is `C = Blue`. Let's try the next available color in the domain (assuming we tried them in the order Red, Green, Blue). However, since A is Red and B is Green, there are no other valid colors for C that are different from both Red and Green.   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C.png?raw=true" width="100%">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C.png?raw=true" width="50%">
 
 ---
 
 **Backtracking:**   
 Since we cannot find a valid color for C, we must **backtrack** to the previous step and try a different color for B.   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B.png?raw=true" width="100%">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B.png?raw=true" width="50%">
 
 ---
 
 **Step 2 (Backtrack 2):**   
 Move back to variable **B**.   
 The current assignment is `B = Green`. Let's try the next available color in the domain: `B = Blue`.   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B2.png?raw=true" width="100%">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B2.png?raw=true" width="50%">
 
 ---
 
 **Step 3 (Backtrack 2):**   
 Move to variable **C**.   
 `C ≠ Red` (adjacent to A) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C2.png?raw=true" width="100%">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C2.png?raw=true" width="50%">
 
 ---
 
