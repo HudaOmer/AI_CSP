@@ -202,11 +202,11 @@ Therefore, the Map 2 problem as a CSP with the domain {Red, Green, Blue} has **n
 #### Solution:
 - **Backtracking**:  
 
-  Okay, I will use the step-by-step template you provided to demonstrate a backtracking solution for **Map 3**, drawing on the information from "AI_UofK_Assignment_4.pdf" and our previous conversation history about the adjacency rules for Map 3.
+##### 🔍 Step-by-Step Backtracking Solution
 
-Please note that the template you provided seems to be for a map with four regions (A, B, C, D) and likely three colors. **Map 3, as defined in the assignment, has five regions (Center, A, B, C, D) and a domain of four colors {Red, Green, Blue, Yellow}**. We will adapt the template to fit Map 3.
+Shows step-by-step assignments, including decisions and conflicts that lead to backtracking.
 
-Let's proceed with the backtracking steps:
+---
 
 **Step 1:**
 Start by assigning a color to the **Center** variable. Let’s try:
