@@ -201,7 +201,63 @@ Therefore, the Map 2 problem as a CSP with the domain {Red, Green, Blue} has **n
 
 #### Solution:
 - **Backtracking**:  
-  Detailed steps showing how the center node constrains others.
+
+  Okay, I will use the step-by-step template you provided to demonstrate a backtracking solution for **Map 3**, drawing on the information from "AI_UofK_Assignment_4.pdf" and our previous conversation history about the adjacency rules for Map 3.
+
+Please note that the template you provided seems to be for a map with four regions (A, B, C, D) and likely three colors. **Map 3, as defined in the assignment, has five regions (Center, A, B, C, D) and a domain of four colors {Red, Green, Blue, Yellow}**. We will adapt the template to fit Map 3.
+
+Let's proceed with the backtracking steps:
+
+**Step 1:**
+Start by assigning a color to the **Center** variable. Let’s try:
+`Center = Red`
+
+---
+
+**Step 2:**
+Move to variable **A**.
+`A ≠ Red` (adjacent to Center) → Try: `A = Green`
+
+---
+
+**Step 3:**
+Move to variable **B**.
+`B ≠ Red` (adjacent to Center) & `B ≠ Green` (adjacent to A) → Try: `B = Blue`
+
+---
+
+**Step 4:**
+Move to variable **C**.
+`C ≠ Red` (adjacent to Center) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`
+
+---
+
+**Step 5:**
+Move to variable **D**.
+`D ≠ Red` (adjacent to Center) & `D ≠ Green` (adjacent to A) & `D ≠ Green` (adjacent to C) → Try: `D = Blue`
+
+Now, let's check the constraints for **D**:
+*   D (Blue) is not the same color as Center (Red) - Constraint satisfied.
+*   D (Blue) is not the same color as A (Green) - Constraint satisfied.
+*   D (Blue) is not the same color as C (Green) - Constraint satisfied.
+
+All constraints are satisfied with this assignment.
+
+---
+
+**✅ Final Assignment:**
+`Center = Red`
+`A = Green`
+`B = Blue`
+`C = Green`
+`D = Blue`
+
+**Result:**  
+🎉 A valid solution was found with **no backtracking required**!
+
+This solution uses only **three colors** (Red, Green, Blue) from the domain {Red, Green, Blue, Yellow}. This demonstrates a sequence of assignments to solve the problem using backtracking, as required by Task 2 for Map 3. It also verifies Task 3 by showing that three colors are sufficient. Remember that "Use as few colors as possible" is a general goal of the map coloring problem.
+
+
 - **Arc Consistency**:  
   Simplifies the problem by shrinking domains before deeper recursion.
 
