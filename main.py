@@ -5,54 +5,33 @@ from arc_consistancy import ArcConsistancy
 from ac3_bt import Ac3Bt
 
 def main():
-    problem1 = get_simple_map()
-    problem2 = get_circular_map()
-    problem3 = get_star_map()
+    # List of problems with labels
+    problems = [
+        ("Simple Map", get_simple_map()),
+        ("Circular Map", get_circular_map()),
+        ("Star Map", get_star_map())
+    ]
 
-    solver1 = Solver(problem1)
-    solver2 = Solver(problem2)
-    solver3 = Solver(problem3)
+    # Available algorithms
+    algorithms = {
+        "backtracking": Backtracking,
+        "ac3_bt": Ac3Bt,
+        "arc_consistancy": ArcConsistancy
+    }
 
-    # Register algorithms
-    solver1.register("backtracking", Backtracking)
-    solver1.register("arc_consistancy", ArcConsistancy)
-    solver1.register("ac3_bt", Ac3Bt) 
+    # Loop over problems
+    for label, problem in problems:
+        print(f"\n🔍 CSP Map: {label}")
+        solver = Solver(problem)
 
-    solver2.register("backtracking", Backtracking)
-    solver2.register("arc_consistancy", ArcConsistancy)
-    solver2.register("ac3_bt", Ac3Bt) 
+        # Register all algorithms
+        for name, func in algorithms.items():
+            solver.register(name, func)
 
-    solver3.register("backtracking", Backtracking)
-    solver3.register("arc_consistancy", ArcConsistancy)
-    solver3.register("ac3_bt", Ac3Bt) 
-
-    # Run desired algorithm
-    
-
-    print("CSP Map 2: Circular Map")
-    solver2.run("backtracking")
-    print()
-    solver2.run("ac3_bt")
-    print()
-    solver2.run("arc_consistancy")
-    print()
-
-    print("CSP Map 1: Simple Map")
-    solver1.run("backtracking")
-    print()
-    solver1.run("ac3_bt")
-    print()
-    solver1.run("arc_consistancy")
-    print()
-
-    print("CSP Map 3: Star Map")
-    solver3.run("backtracking")
-    print()
-    solver3.run("ac3_bt")
-    print()
-    solver3.run("arc_consistancy")
-    print()
-
+        # Run all algorithms for this problem
+        for name in algorithms.keys():
+            solver.run(name)
+            print()
 
 if __name__ == "__main__":
     main()
