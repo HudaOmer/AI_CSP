@@ -9,7 +9,7 @@ def ArcConsistancy(map_csp):
             print_line()
             print(f"Backtracking from {map_csp.variables[var].name}")
             smallPrint()
-            print("No solution exists!")
+            print("\n❌ No valid solution!")
             return -1
 
         map_csp.variables[var].color = color
@@ -27,7 +27,7 @@ def ArcConsistancy(map_csp):
         print()
     
     smallPrint()
-    print("Success! The final results are:")
+    print("\n✅ Success! Solution found, The final results are:")
 
     return 0
         

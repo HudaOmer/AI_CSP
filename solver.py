@@ -19,7 +19,9 @@ class Solver:
         print(f"Running {name.title()}...\n")
         result = self.algorithms[name](self.map_csp)
 
-        if hasattr(self.map_csp, "print_results") and callable(getattr(self.map_csp, "print_results")):
+        if name == "arc_consistancy":
+            print(self.map_csp.print_colors())
+        elif hasattr(self.map_csp, "print_results") and callable(getattr(self.map_csp, "print_results")):
             print(self.map_csp.print_results())
         elif hasattr(self.map_csp, "print_colors") and callable(getattr(self.map_csp, "print_colors")):
             print(self.map_csp.print_colors())

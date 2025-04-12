@@ -21,9 +21,9 @@ def Backtracking(map_csp):
             map_csp.variables[var].assigned_value = choice
             var += 1
         else:
-            print_line()
-            print(f"Backtracking from {map_csp.variables[var].name}")
-            print(map_csp.print_results())
+            # print_line()
+            # print(f"Backtracking from {map_csp.variables[var].name}")
+            # print(map_csp.print_results())
             map_csp.variables[var].assigned_value = 0
             allowed_history[var] = []
 
@@ -33,14 +33,14 @@ def Backtracking(map_csp):
                 map_csp.variables[var - 1].assigned_value = random.choice(allowed_history[var])
             
             iterations -= 1
-            print(f"{var}")
-        print(f"{allowed_history=} & {allowed=}")
+            # print(f"{var}")
+        # print(f"{allowed_history=} & {allowed=}")
 
-    smallPrint()
+    # smallPrint()
 
     if iterations:
-        print("Success! The final results are:")
+        print("\n✅ Success! Solution found, The final results are:")
     else:
-        print("No solution exists!")
+        print("\n❌ No valid solution!")
         return -1
     return map_csp

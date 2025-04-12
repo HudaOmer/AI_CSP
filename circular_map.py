@@ -2,6 +2,7 @@ from variable import Variable
 from map_csp import MapCSP
 from backtracking import Backtracking
 from arc_consistancy import ArcConsistancy
+from ac3_bt import Ac3Bt
 from helper import bigPrint
 
 
@@ -31,3 +32,7 @@ print("Solution Using Arc Consistancy Started\n")
 result_ac = ArcConsistancy(circular_map)
 print(circular_map.print_colors())
 
+bigPrint("ARC CONSISTANCY WITH BACKTRACKING")
+print("Solution Using Arc Consistancy Started\n")
+result_ac_bt = Ac3Bt(circular_map)
+print(circular_map.print_colors())

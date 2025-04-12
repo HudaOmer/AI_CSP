@@ -33,7 +33,7 @@ def get_circular_map():
 
     return MapCSP([A, B, C, D], domain, "Adjacent regions must not share the same color.")
 
-def get_center_star_map():
+def get_star_map():
     domain = ["Red", "Green", "Blue", "Yellow"]
 
     center = Variable("Center", domain[:])
