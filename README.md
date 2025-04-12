@@ -33,20 +33,60 @@ Solutions are obtained using:
 - **Constraints**: Adjacent regions must not share the same color.
 
 #### Solution:
-- **Backtracking**:  
-  Shows step-by-step assignments, including decisions that lead to backtracking.
-  **Step 1:** Start by assigning a color to variable A. Let's say A = Red.
-  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_A.png)
-  **Step 2:** Move to variable B. B cannot be Red (adjacent to A). Let's try B = Green.
-  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_B.png)
-  **Step 3:** Move to variable C. C cannot be Red (adjacent to A). Let's try C = Green. However, B is also Green, and B is not adjacent to C, so this is a valid assignment so far.
-  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_C.png)
-  **Step 4:** Move to variable D. D cannot be Green (adjacent to B) and cannot be Green (adjacent to C). So, D must be Blue.
-  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_D.png)
-  **Step 5:** Move to variable E. E cannot be Green (adjacent to C) and cannot be Blue (adjacent to D). So, E must be Red.
-  ![](https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_final.png)
-  ▪ We have found a valid assignment: A=Red, B=Green, C=Green, D=Blue, E=Red.
-  The solution is direct, No backtracking was needed!
+- **Backtracking**:
+
+##### 🔍 Step-by-Step Backtracking Solution
+
+Shows step-by-step assignments, including decisions that lead to backtracking.
+
+---
+
+**Step 1:**  
+Start by assigning a color to variable **A**.  
+Let’s say: `A = Red`  
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_A.png?raw=true" alt="Step 1" width="50%"/>
+
+---
+
+**Step 2:**  
+Move to variable **B**.  
+`B ≠ Red` (adjacent to A) → Try: `B = Green`  
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_B.png?raw=true" alt="Step 2" width="50%"/>
+
+---
+
+**Step 3:**  
+Move to variable **C**.  
+`C ≠ Red` (adjacent to A) & `C ≠ Green` (adjacent to B) → Try: `C = Blue`
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_C.png?raw=true" alt="Step 3" width="50%"/>
+
+---
+
+**Step 4:**  
+Move to variable **D**.  
+`D ≠ Green` (adjacent to B) & `D ≠ Blue` (adjacent to C) → Try: `D = Red`  
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_D.png?raw=true" alt="Step 4" width="50%"/>
+
+---
+
+**Step 5:**  
+Move to variable **E**.  
+`E ≠ Blue` (adjacent to C) & `E ≠ Red` (adjacent to D) → Try: `E = Green`  
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_1_final.png?raw=true" alt="Step 5" width="50%"/>
+
+---
+
+##### ✅ Final Assignment:
+- A = Red  
+- B = Green  
+- C = Blue  
+- D = Red  
+- E = Green
+
+**Result:**  
+🎉 A valid solution was found with **no backtracking required**!
+
+---
   
 - **Arc Consistency**:  
   Domains are filtered using AC-3 to eliminate inconsistent values early.
