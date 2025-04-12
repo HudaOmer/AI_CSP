@@ -180,6 +180,7 @@ We would continue to backtrack through the assignments for B and potentially A, 
 
 Therefore, the Map 2 problem as a CSP with the domain {Red, Green, Blue} has **no solution**. This demonstrates that with these fully connected adjacencies, three colors are **not sufficient** to solve the problem. It would require at least four distinct colors.
 
+---
 
 - **Arc Consistency**:  
   Used before and during the search to reduce domains.
