@@ -210,7 +210,7 @@ Shows step-by-step assignments, including decisions and conflicts that lead to b
 
 **Step 1:**
 Start by assigning a color to the **Center** variable. Let’s try:   
-`Center = Red`
+`Center = Red`   
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_center.png?raw=true" alt="Step 1" width="50%"/>
 
 ---
@@ -225,21 +225,21 @@ Move to variable **A**.
 
 **Step 3:**
 Move to variable **B**.   
-`B ≠ Red` (adjacent to Center) & `B ≠ Green` (adjacent to A) → Try: `B = Blue`
+`B ≠ Red` (adjacent to Center) & `B ≠ Green` (adjacent to A) → Try: `B = Blue`   
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_B.png?raw=true" alt="Step 1" width="50%"/>
 
 ---
 
 **Step 4:**
 Move to variable **C**.   
-`C ≠ Red` (adjacent to Center) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`
+`C ≠ Red` (adjacent to Center) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`   
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_C.png?raw=true" alt="Step 1" width="50%"/>
 
 ---
 
 **Step 5:**
 Move to variable **D**.   
-`D ≠ Red` (adjacent to Center) & `D ≠ Green` (adjacent to A) & `D ≠ Green` (adjacent to C) → Try: `D = Blue`
+`D ≠ Red` (adjacent to Center) & `D ≠ Green` (adjacent to A) & `D ≠ Green` (adjacent to C) → Try: `D = Blue`   
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final.png?raw=true" alt="Step 1" width="50%"/>
 
 Now, let's check the constraints for **D**:
@@ -265,8 +265,9 @@ This solution uses only **three colors** (Red, Green, Blue) from the domain {Red
 
 **Others that include yellow:**   
 
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final_2.png?raw=true" alt="Step 1" width="50%"/>
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final_3.png?raw=true" alt="Step 1" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final_2.png?raw=true" alt="Step 1" width="45%" style="display:inline-block; margin-right:10px;">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final_3.png?raw=true" alt="Step 2" width="45%" style="display:inline-block;">
+
 
 - **Arc Consistency**:  
   Simplifies the problem by shrinking domains before deeper recursion.
