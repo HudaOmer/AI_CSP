@@ -1,4 +1,4 @@
-from ac3 import ac3, backtrack
+from algorithms.ac3 import ac3, backtrack
 from helper import smallPrint
 
 def Ac3Bt(map_csp):
@@ -6,7 +6,7 @@ def Ac3Bt(map_csp):
     if not ac3(map_csp):
         print("Inconsistent CSP at initialization.")
         smallPrint()
-        print("No solution exists!")
+        print("❌ No solution exists!")
         return
 
     print("Running Backtracking + AC-3...")

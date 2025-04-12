@@ -1,7 +1,9 @@
-from variable import Variable
-from map_csp import MapCSP
-from backtracking import Backtracking
-from arc_consistancy import ArcConsistancy
+from models.variable import Variable
+from models.map_csp import MapCSP
+from algorithms.backtracking import Backtracking
+from algorithms.classic_backtrack import ClassicBacktracking
+from algorithms.arc_consistancy import ArcConsistancy
+from algorithms.ac3_bt import Ac3Bt
 from helper import print_line, bigPrint
 
 domain = ["Red", "Green", "Blue"]
@@ -27,8 +29,17 @@ print("Solution Using Backtracking Started\n")
 result_bt = Backtracking(simple_map)
 print(simple_map.print_results())
 
+bigPrint("Classic Backtracking")
+print("Solution Using Classic Backtracking Started\n")
+result_ac_bt = ClassicBacktracking(simple_map)
+print(simple_map.print_colors())
+
 bigPrint("ARC CONSISTANCY")
 print("Solution Using Arc Consistancy Started\n")
 result_ac = ArcConsistancy(simple_map)
 print(simple_map.print_colors())
 
+bigPrint("ARC CONSISTANCY WITH BACKTRACKING")
+print("Solution Using Arc Consistancy Started\n")
+result_ac_bt = Ac3Bt(simple_map)
+print(simple_map.print_colors())

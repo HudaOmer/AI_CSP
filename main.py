@@ -1,9 +1,9 @@
 from problem import get_simple_map, get_circular_map, get_star_map
 from solver import Solver
-from backtracking import Backtracking
-from classic_backtrack import ClassicBacktracking
-from arc_consistancy import ArcConsistancy
-from ac3_bt import Ac3Bt
+from algorithms.backtracking import Backtracking
+from algorithms.classic_backtrack import ClassicBacktracking
+from algorithms.arc_consistancy import ArcConsistancy
+from algorithms.ac3_bt import Ac3Bt
 
 def main():
     # List of problems with labels

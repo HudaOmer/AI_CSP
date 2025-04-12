@@ -1,8 +1,9 @@
-from variable import Variable
-from map_csp import MapCSP
-from backtracking import Backtracking
-from arc_consistancy import ArcConsistancy
-from ac3_bt import Ac3Bt
+from models.variable import Variable
+from models.map_csp import MapCSP
+from algorithms.backtracking import Backtracking
+from algorithms.classic_backtrack import ClassicBacktracking
+from algorithms.arc_consistancy import ArcConsistancy
+from algorithms.ac3_bt import Ac3Bt
 from helper import bigPrint
 
 
@@ -26,6 +27,11 @@ bigPrint("BACKTRACKING")
 print("Solution Using Backtracking Started\n")
 result_bt = Backtracking(circular_map)
 print(circular_map.print_results())
+
+bigPrint("Classic Backtracking")
+print("Solution Using Classic Backtracking Started\n")
+result_ac_bt = ClassicBacktracking(circular_map)
+print(circular_map.print_colors())
 
 bigPrint("ARC CONSISTANCY")
 print("Solution Using Arc Consistancy Started\n")

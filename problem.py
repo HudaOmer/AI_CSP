@@ -1,5 +1,5 @@
-from variable import Variable
-from map_csp import MapCSP
+from models.variable import Variable
+from models.map_csp import MapCSP
 
 def get_simple_map():
     domain = ["Red", "Green", "Blue"]
