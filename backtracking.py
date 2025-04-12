@@ -1,4 +1,5 @@
 import random
+from helper import print_line, smallPrint
 
 def Backtracking(map_csp):
     var , iterations, back = 0 , 5, 0
@@ -34,19 +35,12 @@ def Backtracking(map_csp):
             iterations -= 1
             print(f"{var}")
         print(f"{allowed_history=} & {allowed=}")
-        
-            
-            
-    
-    print_line()
+
+    smallPrint()
+
     if iterations:
         print("Success! The final results are:")
     else:
         print("No solution exists!")
         return -1
     return map_csp
-
-
-def print_line():
-    print("----------------------------------------------")
-    return 0

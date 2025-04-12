@@ -21,3 +21,9 @@ class MapCSP:
             result.append(f"{var.name}: {color}")
         return "\n".join(result)
 
+    def print_colors(self):
+        colors = []
+        for var in self.variables:
+            colors.append(f"{var.name}: {var.color}")
+        return "\n".join(colors)
+

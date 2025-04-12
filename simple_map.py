@@ -1,6 +1,8 @@
 from variable import Variable
 from map_csp import MapCSP
 from backtracking import Backtracking
+from arc_consistancy import ArcConsistancy
+from helper import print_line, bigPrint
 
 domain = ["Red", "Green", "Blue"]
 
@@ -17,7 +19,16 @@ D.neighbors = [B, C, E]
 E.neighbors = [C, D]
 
 simple_map = MapCSP([A, B, C, D, E], domain, "Adjacent regions must not share the same color.")
+bigPrint("CSP MAP DESCRIPTION")
 print(simple_map)
-result = Backtracking(simple_map)
+
+bigPrint("BACKTRACKING")
+print("Solution Using Backtracking Started\n")
+result_bt = Backtracking(simple_map)
 print(simple_map.print_results())
+
+bigPrint("ARC CONSISTANCY")
+print("Solution Using Arc Consistancy Started\n")
+result_ac = ArcConsistancy(simple_map)
+print(simple_map.print_colors())
 
