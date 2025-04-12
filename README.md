@@ -209,7 +209,7 @@ Shows step-by-step assignments, including decisions and conflicts that lead to b
 ---
 
 **Step 1:**
-Start by assigning a color to the **Center** variable. Let’s try:
+Start by assigning a color to the **Center** variable. Let’s try:   
 `Center = Red`
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_center.png?raw=true" alt="Step 1" width="50%"/>
 
@@ -224,21 +224,21 @@ Move to variable **A**.
 ---
 
 **Step 3:**
-Move to variable **B**.
+Move to variable **B**.   
 `B ≠ Red` (adjacent to Center) & `B ≠ Green` (adjacent to A) → Try: `B = Blue`
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_B.png?raw=true" alt="Step 1" width="50%"/>
 
 ---
 
 **Step 4:**
-Move to variable **C**.
+Move to variable **C**.   
 `C ≠ Red` (adjacent to Center) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_C.png?raw=true" alt="Step 1" width="50%"/>
 
 ---
 
 **Step 5:**
-Move to variable **D**.
+Move to variable **D**.   
 `D ≠ Red` (adjacent to Center) & `D ≠ Green` (adjacent to A) & `D ≠ Green` (adjacent to C) → Try: `D = Blue`
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final.png?raw=true" alt="Step 1" width="50%"/>
 
@@ -263,7 +263,8 @@ All constraints are satisfied with this assignment.
 
 This solution uses only **three colors** (Red, Green, Blue) from the domain {Red, Green, Blue, Yellow}. This demonstrates a sequence of assignments to solve the problem using backtracking, as required by Task 2 for Map 3. It also verifies Task 3 by showing that three colors are sufficient. Remember that "Use as few colors as possible" is a general goal of the map coloring problem.
 
-Others that include yellow:
+**Others that include yellow:**   
+
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final_2.png?raw=true" alt="Step 1" width="50%"/>
 <img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final_3.png?raw=true" alt="Step 1" width="50%"/>
 
