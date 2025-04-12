@@ -34,6 +34,7 @@ def ClassicBacktracking(map_csp):
     if result:
         for var in result:
             var.color = result[var]
+        print("\n✅ Success! Solution found, The final results are:")
         return True
     else:
         print("❌ No solution found!")

@@ -14,6 +14,6 @@ def Ac3Bt(map_csp):
 
     if result:
         print("\n✅ Success! Solution found, The final results are:")
-        print(map_csp.print_colors())
+        # print(map_csp.print_colors())
     else:
         print("\n❌ No valid solution!")

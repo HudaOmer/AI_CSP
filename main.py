@@ -1,20 +1,22 @@
 from problem import get_simple_map, get_circular_map, get_star_map
 from solver import Solver
 from backtracking import Backtracking
+from classic_backtrack import ClassicBacktracking
 from arc_consistancy import ArcConsistancy
 from ac3_bt import Ac3Bt
 
 def main():
     # List of problems with labels
     problems = [
-        ("Simple Map", get_simple_map()),
         ("Circular Map", get_circular_map()),
+        ("Simple Map", get_simple_map()),
         ("Star Map", get_star_map())
     ]
 
     # Available algorithms
     algorithms = {
         "backtracking": Backtracking,
+        "classic_backtracking": ClassicBacktracking,
         "ac3_bt": Ac3Bt,
         "arc_consistancy": ArcConsistancy
     }
