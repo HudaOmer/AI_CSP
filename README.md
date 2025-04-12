@@ -107,13 +107,85 @@ Move to variable **E**.
 - **Constraints**: Each region is adjacent to two others in a circular fashion.
 
 #### Solution:
-- **Backtracking**:  
-  Describes the order of assignment and conflicts.
+- **Backtracking**:
+
+##### 🔍 Step-by-Step Backtracking Solution
+
+Shows step-by-step assignments, including decisions and conflicts that lead to backtracking.
+
+---
+
+**Step 1:**
+Start by assigning a color to variable **A**.
+Let’s say: `A = Red`
+
+---
+
+**Step 2:**
+Move to variable **B**.
+`B ≠ Red` (adjacent to A) → Try: `B = Green`
+
+---
+
+**Step 3:**
+Move to variable **C**.
+`C ≠ Red` (adjacent to A) & `C ≠ Green` (adjacent to B) → Try: `C = Blue`
+
+---
+
+**Step 4:**
+Move to variable **D**.
+`D ≠ Red` (adjacent to A) & `D ≠ Green` (adjacent to B) & `D ≠ Blue` (adjacent to C)
+
+At this point, we have encountered a **constraint violation**. According to the adjacencies you provided, **D is adjacent to A, B, and C**. Since A is Red, B is Green, and C is Blue, there is **no remaining color in the domain {Red, Green, Blue} that can be assigned to D** without violating the constraint that no two adjacent regions can have the same color.
+
+---
+
+**Backtracking:**
+Since we cannot assign a valid color to D, we must **backtrack** to the previous step and try a different color for C.
+
+---
+
+**Step 3 (Backtrack 1):**
+Move back to variable **C**. The current assignment is `C = Blue`. Let's try the next available color in the domain (assuming we tried them in the order Red, Green, Blue). However, since A is Red and B is Green, there are no other valid colors for C that are different from both Red and Green.
+
+---
+
+**Backtracking:**
+Since we cannot find a valid color for C, we must **backtrack** to the previous step and try a different color for B.
+
+---
+
+**Step 2 (Backtrack 2):**
+Move back to variable **B**. The current assignment is `B = Green`. Let's try the next available color in the domain: `B = Blue`.
+
+---
+
+**Step 3 (Backtrack 2):**
+Move to variable **C**.
+`C ≠ Red` (adjacent to A) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`
+
+---
+
+**Step 4 (Backtrack 2):**
+Move to variable **D**.
+`D ≠ Red` (adjacent to A) & `D ≠ Blue` (adjacent to B) & `D ≠ Green` (adjacent to C)
+
+Again, we have encountered a **constraint violation**. D is adjacent to A (Red), B (Blue), and C (Green), and there are no other colors in the domain.
+
+---
+
+**Further Backtracking:**
+We would continue to backtrack through the assignments for B and potentially A, trying all possible color combinations. However, given that **every region is adjacent to every other region**, and we only have **three colors available**, it is **impossible to find a valid coloring**. Each of the four regions requires a different color, but only three are available in the domain.
+
+Therefore, the Map 2 problem as a CSP with the domain {Red, Green, Blue} has **no solution**. This demonstrates that with these fully connected adjacencies, three colors are **not sufficient** to solve the problem. It would require at least four distinct colors.
+
+
 - **Arc Consistency**:  
   Used before and during the search to reduce domains.
 
 #### Final Result:
-- ✅ Problem is solved using only **3 colors**.
+- ❌ Problem can't be solved using only **3 colors**, a fourth one is needed.
 - 🔍 Includes explanation of variable ordering and consistency enforcement.
 
 ---
