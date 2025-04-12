@@ -264,6 +264,8 @@ All constraints are satisfied with this assignment.
 
 This solution uses only **three colors** (Red, Green, Blue) from the domain {Red, Green, Blue, Yellow}. This demonstrates a sequence of assignments to solve the problem using backtracking, as required by Task 2 for Map 3. It also verifies Task 3 by showing that three colors are sufficient. Remember that "Use as few colors as possible" is a general goal of the map coloring problem.
 
+---
+
 **Others that include yellow:**   
 
 <table>
@@ -273,7 +275,7 @@ This solution uses only **three colors** (Red, Green, Blue) from the domain {Red
   </tr>
 </table>
 
-
+---
 
 - **Arc Consistency**:  
   Simplifies the problem by shrinking domains before deeper recursion.
