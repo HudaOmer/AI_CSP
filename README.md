@@ -115,27 +115,43 @@ Shows step-by-step assignments, including decisions and conflicts that lead to b
 
 ---
 
-**Step 1:**
-Start by assigning a color to variable **A**.
-Let’s say: `A = Red`
+**Step 1:**   
+Start by assigning a color to variable **A**.   
+Let’s say: `A = Red`   
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_A.png?raw=true" alt="Step 5" width="50%"/>
 
 ---
 
-**Step 2:**
-Move to variable **B**.
-`B ≠ Red` (adjacent to A) → Try: `B = Green`
+**Step 2:**   
+Move to variable **B**.   
+`B ≠ Red` (adjacent to A) → Try: `B = Green`   
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B.png?raw=true" alt="Step 5" width="50%"/>
 
 ---
 
-**Step 3:**
-Move to variable **C**.
-`C ≠ Red` (adjacent to A) & `C ≠ Green` (adjacent to B) → Try: `C = Blue`
+**Step 3:**   
+Move to variable **C**.   
+`C ≠ Red` (adjacent to A) & `C ≠ Green` (adjacent to B) → Try: `C = Blue`   
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C.png?raw=true" alt="Step 5" width="50%"/>
 
 ---
 
-**Step 4:**
-Move to variable **D**.
-`D ≠ Red` (adjacent to A) & `D ≠ Green` (adjacent to B) & `D ≠ Blue` (adjacent to C)
+**Step 4:**   
+Move to variable **D**.   
+`D ≠ Red` (adjacent to A) & `D ≠ Green` (adjacent to B) & `D ≠ Blue` (adjacent to C).  
+
+<table>
+  <tr>
+    <td><img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_DA.png?raw=true" width="100%"></td>
+    <td><img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_DB.png?raw=true" width="100%"></td>
+    <td><img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_DC.png?raw=true" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center">Step 1: A = Red</td>
+    <td align="center">Step 2: B = Green</td>
+    <td align="center">Step 3: C = Green</td>
+  </tr>
+</table>
 
 At this point, we have encountered a **constraint violation**. According to the adjacencies you provided, **D is adjacent to A, B, and C**. Since A is Red, B is Green, and C is Blue, there is **no remaining color in the domain {Red, Green, Blue} that can be assigned to D** without violating the constraint that no two adjacent regions can have the same color.
 
@@ -146,32 +162,51 @@ Since we cannot assign a valid color to D, we must **backtrack** to the previous
 
 ---
 
-**Step 3 (Backtrack 1):**
-Move back to variable **C**. The current assignment is `C = Blue`. Let's try the next available color in the domain (assuming we tried them in the order Red, Green, Blue). However, since A is Red and B is Green, there are no other valid colors for C that are different from both Red and Green.
+**Step 3 (Backtrack 1):**   
+Move back to variable **C**.   
+The current assignment is `C = Blue`. Let's try the next available color in the domain (assuming we tried them in the order Red, Green, Blue). However, since A is Red and B is Green, there are no other valid colors for C that are different from both Red and Green.   
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C.png?raw=true" width="100%">
 
 ---
 
-**Backtracking:**
-Since we cannot find a valid color for C, we must **backtrack** to the previous step and try a different color for B.
+**Backtracking:**   
+Since we cannot find a valid color for C, we must **backtrack** to the previous step and try a different color for B.   
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B.png?raw=true" width="100%">
 
 ---
 
-**Step 2 (Backtrack 2):**
-Move back to variable **B**. The current assignment is `B = Green`. Let's try the next available color in the domain: `B = Blue`.
+**Step 2 (Backtrack 2):**   
+Move back to variable **B**.   
+The current assignment is `B = Green`. Let's try the next available color in the domain: `B = Blue`.   
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B2.png?raw=true" width="100%">
 
 ---
 
-**Step 3 (Backtrack 2):**
-Move to variable **C**.
-`C ≠ Red` (adjacent to A) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`
+**Step 3 (Backtrack 2):**   
+Move to variable **C**.   
+`C ≠ Red` (adjacent to A) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`   
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C2.png?raw=true" width="100%">
 
 ---
 
-**Step 4 (Backtrack 2):**
-Move to variable **D**.
-`D ≠ Red` (adjacent to A) & `D ≠ Blue` (adjacent to B) & `D ≠ Green` (adjacent to C)
+**Step 4 (Backtrack 2):**   
+Move to variable **D**.   
+`D ≠ Red` (adjacent to A) & `D ≠ Blue` (adjacent to B) & `D ≠ Green` (adjacent to C).  
 
-Again, we have encountered a **constraint violation**. D is adjacent to A (Red), B (Blue), and C (Green), and there are no other colors in the domain.
+<table>
+  <tr>
+    <td><img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_DA2.png?raw=true" width="100%"></td>
+    <td><img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_DB2.png?raw=true" width="100%"></td>
+    <td><img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_DC2.png?raw=true" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center">Step 1: A = Red</td>
+    <td align="center">Step 2: B = Green</td>
+    <td align="center">Step 3: C = Green</td>
+  </tr>
+</table>
+
+Again, we have encountered a **constraint violation**. D is adjacent to A (Red), B (Blue), and C (Green), and there are no other colors in the domain.   
 
 ---
 
