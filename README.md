@@ -118,21 +118,21 @@ Shows step-by-step assignments, including decisions and conflicts that lead to b
 **Step 1:**   
 Start by assigning a color to variable **A**.   
 Let’s say: `A = Red`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_A.png?raw=true" alt="Step 5" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_A.png?raw=true" alt="Step 5" width="40%"/>
 
 ---
 
 **Step 2:**   
 Move to variable **B**.   
 `B ≠ Red` (adjacent to A) → Try: `B = Green`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B.png?raw=true" alt="Step 5" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B.png?raw=true" alt="Step 5" width="40%"/>
 
 ---
 
 **Step 3:**   
 Move to variable **C**.   
 `C ≠ Red` (adjacent to A) & `C ≠ Green` (adjacent to B) → Try: `C = Blue`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C.png?raw=true" alt="Step 5" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C.png?raw=true" alt="Step 5" width="40%"/>
 
 ---
 
@@ -171,21 +171,21 @@ The current assignment is `C = Blue`. Let's try the next available color in the 
 
 **Backtracking:**   
 Since we cannot find a valid color for C, we must **backtrack** to the previous step and try a different color for B.   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B.png?raw=true" width="50%">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B.png?raw=true" width="40%">
 
 ---
 
 **Step 2 (Backtrack 2):**   
 Move back to variable **B**.   
 The current assignment is `B = Green`. Let's try the next available color in the domain: `B = Blue`.   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B2.png?raw=true" width="50%">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_B2.png?raw=true" width="40%">
 
 ---
 
 **Step 3 (Backtrack 2):**   
 Move to variable **C**.   
 `C ≠ Red` (adjacent to A) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C2.png?raw=true" width="50%">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C2.png?raw=true" width="40%">
 
 ---
 
@@ -247,14 +247,14 @@ Shows step-by-step assignments, including decisions and conflicts that lead to b
 **Step 1:**   
 Start by assigning a color to the **Center** variable. Let’s try:   
 `Center = Red`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_center.png?raw=true" alt="Step 1" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_center.png?raw=true" alt="Step 1" width="40%"/>
 
 ---
 
 **Step 2:**   
 Move to variable **A**.  
 `A ≠ Red` (adjacent to Center) → Try: `A = Green`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_A.png?raw=true" alt="Step 1" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_A.png?raw=true" alt="Step 1" width="40%"/>
 
 
 ---
@@ -262,21 +262,21 @@ Move to variable **A**.
 **Step 3:**   
 Move to variable **B**.   
 `B ≠ Red` (adjacent to Center) & `B ≠ Green` (adjacent to A) → Try: `B = Blue`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_B.png?raw=true" alt="Step 1" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_B.png?raw=true" alt="Step 1" width="40%"/>
 
 ---
 
 **Step 4:**   
 Move to variable **C**.   
 `C ≠ Red` (adjacent to Center) & `C ≠ Blue` (adjacent to B) → Try: `C = Green`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_C.png?raw=true" alt="Step 1" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_C.png?raw=true" alt="Step 1" width="40%"/>
 
 ---
 
 **Step 5:**   
 Move to variable **D**.   
 `D ≠ Red` (adjacent to Center) & `D ≠ Green` (adjacent to A) & `D ≠ Green` (adjacent to C) → Try: `D = Blue`   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final.png?raw=true" alt="Step 1" width="50%"/>
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_3_final.png?raw=true" alt="Step 1" width="40%"/>
 
 Now, let's check the constraints for **D**:
 *   D (Blue) is not the same color as Center (Red) - Constraint satisfied.
