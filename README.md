@@ -149,7 +149,7 @@ Move to variable **D**.
   <tr>
     <td align="center">Step 1: A = Red</td>
     <td align="center">Step 2: B = Green</td>
-    <td align="center">Step 3: C = Green</td>
+    <td align="center">Step 3: C = Blue/td>
   </tr>
 </table>
 
@@ -165,7 +165,7 @@ Since we cannot assign a valid color to D, we must **backtrack** to the previous
 **Step 3 (Backtrack 1):**   
 Move back to variable **C**.   
 The current assignment is `C = Blue`. Let's try the next available color in the domain (assuming we tried them in the order Red, Green, Blue). However, since A is Red and B is Green, there are no other valid colors for C that are different from both Red and Green.   
-<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C.png?raw=true" width="50%">
+<img src="https://github.com/HudaOmer/AI_CSP/blob/master/Images/Solution_2_C.png?raw=true" width="40%">
 
 ---
 
@@ -201,7 +201,7 @@ Move to variable **D**.
   </tr>
   <tr>
     <td align="center">Step 1: A = Red</td>
-    <td align="center">Step 2: B = Green</td>
+    <td align="center">Step 2: B = Blue</td>
     <td align="center">Step 3: C = Green</td>
   </tr>
 </table>
